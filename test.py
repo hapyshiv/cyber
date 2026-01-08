@@ -1,3 +1,2 @@
-Print("Enter your name")
-read(a)
-print("Hello", a)
+name = input("Enter your name: ")
+print("Hello", name)
