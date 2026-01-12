@@ -31,6 +31,7 @@ if uploaded_file:
         data = pickle.load(f)
 
     vectorizer = data[0]
+    label_encoder = data[1]
     models = data[2]
 
 
