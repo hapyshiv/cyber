@@ -38,7 +38,10 @@ if uploaded_file:
     y = df["label"]
 
     model = models[model_name]
-    predictions = model.predict(X)
+    y_true = y  # already strings
+    y_pred_encoded = model.predict(X)
+    y_pred = label_encoder.inverse_transform(y_pred_encoded)
+
 
     st.subheader("📊 Classification Report")
     st.text(classification_report(y, predictions))
