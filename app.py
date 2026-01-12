@@ -35,18 +35,17 @@ if uploaded_file:
     models = data[2]
 
 
-    X = vectorizer.transform(df["email_text"])
-    y = df["label"]
+X = vectorizer.transform(df["email_text"])
+y_true = df["label"]
 
-    model = models[model_name]
-    y_true = y  # already strings
-    y_pred_encoded = model.predict(X)
-    y_pred = label_encoder.inverse_transform(y_pred_encoded)
+model = models[model_name]
+y_pred_encoded = model.predict(X)
+y_pred = label_encoder.inverse_transform(y_pred_encoded)
 
+st.subheader("📊 Classification Report")
+st.text(classification_report(y_true, y_pred))
 
-    st.subheader("📊 Classification Report")
-    st.text(classification_report(y, predictions))
+st.subheader("📉 Confusion Matrix")
+st.write(confusion_matrix(y_true, y_pred))
 
-    st.subheader("📉 Confusion Matrix")
-    st.write(confusion_matrix(y, predictions))
 
