@@ -28,7 +28,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
 
     with open("model/saved_models.pkl", "rb") as f:
-    data = pickle.load(f)
+        data = pickle.load(f)
 
     vectorizer = data["vectorizer"]
     models = data["models"]
