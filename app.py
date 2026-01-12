@@ -31,7 +31,7 @@ if uploaded_file:
         data = pickle.load(f)
 
     vectorizer = data[0]
-    models = data[1]
+    models = data[2]
 
 
     X = vectorizer.transform(df["email_text"])
