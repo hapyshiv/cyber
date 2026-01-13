@@ -30,9 +30,10 @@ if uploaded_file:
     with open("model/saved_models.pkl", "rb") as f:
         data = pickle.load(f)
 
-    vectorizer = data[0]
-    label_encoder = data[1]
-    models = data[2]
+    vectorizer = data["vectorizer"]
+    label_encoder = data["label_encoder"]
+    models = data["models"]
+
 
 
 X = vectorizer.transform(df["email_text"])
