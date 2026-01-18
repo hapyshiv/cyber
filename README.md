@@ -17,7 +17,7 @@ Normal (Benign)
 
 The system aims to improve detection accuracy, reduce false positives, and support cybersecurity monitoring and response.
 
-b. Dataset Description [1 Mark]
+b. Dataset Description
 
 The dataset consists of email text samples labeled into four cybersecurity-related classes.
 
@@ -35,7 +35,7 @@ Labels encoded using LabelEncoder
 
 TF-IDF used for feature extraction with unigrams and bigrams
 
-c. Models Used [6 Marks]
+c. Models Used
 
 Six machine learning models were trained and evaluated using the same feature extraction and preprocessing pipeline.
 
@@ -90,38 +90,3 @@ XGBoost (Ensemble)	Achieved the best performance; handled complex patterns and c
 
 The ensemble-based models (Random Forest and XGBoost) outperformed individual classifiers in most evaluation metrics.
 XGBoost demonstrated superior robustness and predictive power, making it the most suitable model for email cybersecurity classification.
-# Email Cybersecurity Classification System
-
-## Problem Statement
-The objective of this project is to build and deploy multiple machine learning
-classification models to identify cybersecurity threats in emails. Emails are
-classified into Spam, Phishing, Malicious, or Normal categories.
-
-## Dataset Description
-- Dataset Type: Email cybersecurity dataset
-- Number of Instances: 5,000+
-- Number of Features: TF-IDF text features (3000)
-- Target Classes: Spam, Phishing, Malicious, Normal
-- Source: Public Kaggle Dataset
-
-## Models Used and Evaluation Metrics
-
-| Model | Accuracy | AUC | Precision | Recall | F1 | MCC |
-|------|---------|-----|-----------|-------|----|-----|
-| Logistic Regression | | | | | | |
-| Decision Tree | | | | | | |
-| KNN | | | | | | |
-| Naive Bayes | | | | | | |
-| Random Forest | | | | | | |
-| XGBoost | | | | | | |
-
-## Observations
-
-| Model | Observation |
-|------|------------|
-| Logistic Regression | Performs well on linear text data |
-| Decision Tree | Can overfit without tuning |
-| KNN | Sensitive to high dimensionality |
-| Naive Bayes | Very effective for text classification |
-| Random Forest | Robust and stable performance |
-| XGBoost | Best overall accuracy |
